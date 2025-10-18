@@ -186,7 +186,7 @@ npm run preview  # Preview production build
 ## 🔗 Links
 
 - **Staging:** https://staging19.casestudy-labs.com/
-- **GitHub:** https://github.com/therealjohndough/LIVE-THEME-AGENCY-OCT/tree/main/wp-content/themes/casestudy-labs-modern-theme
+- **GitHub:** https://github.com/therealjohndough/
 - **Tailwind Docs:** https://tailwindcss.com
 - **Alpine.js Docs:** https://alpinejs.dev
 
