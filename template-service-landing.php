@@ -119,206 +119,146 @@ get_header(); ?>
             <p class="section-intro anim-reveal" style="transition-delay: 0.1s;">Choose the package that fits your project's scope and timeline.</p>
 
             <div class="packages-grid">
-                <!-- Mini Sprint Package -->
+                <!-- Lite Unlimited -->
                 <div class="package-card anim-reveal" style="transition-delay: 0.2s;">
                     <div class="package-header">
-                        <h3>Mini Sprint</h3>
-                        <div class="package-price">$3K–$5K</div>
+                        <h3>Lite Unlimited</h3>
+                        <div class="package-price">$2,000&ndash;$2,500</div>
                     </div>
-                    <div class="package-timeline">3–5 days</div>
+                    <div class="package-timeline">2 hrs/day &bull; ~40 hrs/month</div>
                     <div class="package-content">
-                        <p>Quick validation or single phase focus</p>
+                        <p>Perfect for ongoing updates, social graphics, and simple web tasks that keep momentum moving.</p>
                         <div class="package-features">
-                            <h4>Included:</h4>
+                            <h4>Highlights:</h4>
                             <ul>
-                                <li>Discovery & Strategy OR Design & Development</li>
-                                <li>Basic deliverables</li>
-                                <li>1-2 day delivery</li>
+                                <li>Unlimited design, web, and content requests</li>
+                                <li>24&ndash;48 hour turnaround on most tasks</li>
+                                <li>Daily Slack/Notion updates</li>
                             </ul>
                         </div>
                         <div class="package-exclusions">
-                            <h4>Not Included:</h4>
+                            <h4>Ideal For:</h4>
                             <ul>
-                                <li>Full project scope</li>
-                                <li>Content creation</li>
-                                <li>Ongoing support</li>
+                                <li>Marketing teams needing consistent production</li>
+                                <li>Light web maintenance and template tweaks</li>
                             </ul>
                         </div>
                     </div>
-                    <a href="<?php echo esc_url(csl_get_cta_link('mini_sprint', 'services_page', 'package_cta')); ?>" class="btn btn-secondary">Start Mini Sprint</a>
+                    <a href="<?php echo esc_url(csl_get_cta_link('lite_unlimited', 'services_page', 'package_cta')); ?>" class="btn btn-secondary">Choose Lite Unlimited</a>
                 </div>
 
-                <!-- Sprint Package -->
+                <!-- Core Unlimited -->
                 <div class="package-card anim-reveal" style="transition-delay: 0.3s;">
                     <div class="package-header">
-                        <h3>Sprint</h3>
-                        <div class="package-price">$8K–$12K</div>
+                        <h3>Core Unlimited</h3>
+                        <div class="package-price">$3,500&ndash;$5,000</div>
                     </div>
-                    <div class="package-timeline">1–2 weeks</div>
+                    <div class="package-timeline">4 hrs/day &bull; ~80 hrs/month</div>
                     <div class="package-content">
-                        <p>Quick wins or testing</p>
+                        <p>Scale multi-channel campaigns, launch new brand assets, and keep your site fresh with on-demand support.</p>
                         <div class="package-features">
-                            <h4>Included:</h4>
+                            <h4>Highlights:</h4>
                             <ul>
-                                <li>One phase only (Discovery & Strategy OR Launch & Optimize)</li>
-                                <li>Design sprint limited to 2 templates</li>
+                                <li>Unlimited requests with transparent daily timeboxing</li>
+                                <li>Creative director check-ins each month</li>
+                                <li>Weekly reports with priorities and hours used</li>
                             </ul>
                         </div>
                         <div class="package-exclusions">
-                            <h4>Not Included:</h4>
+                            <h4>Ideal For:</h4>
                             <ul>
-                                <li>Full brand development</li>
-                                <li>Complete website build</li>
-                                <li>Content creation</li>
+                                <li>Marketing leaders juggling multiple channels</li>
+                                <li>Brands expanding their campaign calendar</li>
                             </ul>
                         </div>
                     </div>
-                    <a href="<?php echo esc_url(csl_get_cta_link('sprint', 'services_page', 'package_cta')); ?>" class="btn btn-primary">Start Sprint</a>
+                    <a href="<?php echo esc_url(csl_get_cta_link('core_unlimited', 'services_page', 'package_cta')); ?>" class="btn btn-primary">Choose Core Unlimited</a>
                 </div>
 
-                <!-- Mini Core Package -->
-                <div class="package-card anim-reveal" style="transition-delay: 0.4s;">
+                <!-- Studio+ -->
+                <div class="package-card featured anim-reveal" style="transition-delay: 0.4s;">
                     <div class="package-header">
-                        <h3>Mini Core</h3>
-                        <div class="package-price">$15K–$20K</div>
+                        <h3>Studio+</h3>
+                        <div class="package-price">$6,500+</div>
                     </div>
-                    <div class="package-timeline">4–6 weeks</div>
+                    <div class="package-timeline">6 hrs/day &bull; ~120 hrs/month</div>
                     <div class="package-content">
-                        <p>Essential features for MVPs</p>
+                        <p>Unlock motion graphics, front-end development, and complex brand systems with a senior creative pod.</p>
                         <div class="package-features">
-                            <h4>Included:</h4>
+                            <h4>Highlights:</h4>
                             <ul>
-                                <li>Discovery & Strategy</li>
-                                <li>Limited Design & Development</li>
-                                <li>Basic Content & Campaigns</li>
+                                <li>Same-day rush support when you need it</li>
+                                <li>Motion graphics and basic video editing</li>
+                                <li>Advanced dev and design collaboration</li>
                             </ul>
                         </div>
                         <div class="package-exclusions">
-                            <h4>Not Included:</h4>
+                            <h4>Ideal For:</h4>
                             <ul>
-                                <li>Full brand identity</li>
-                                <li>Advanced integrations</li>
-                                <li>Launch & Optimize phase</li>
+                                <li>Product teams launching complex experiences</li>
+                                <li>Brands refreshing across channels in tandem</li>
                             </ul>
                         </div>
                     </div>
-                    <a href="<?php echo esc_url(csl_get_cta_link('mini_core', 'services_page', 'package_cta')); ?>" class="btn btn-accent">Choose Mini Core</a>
+                    <a href="<?php echo esc_url(csl_get_cta_link('studio_plus', 'services_page', 'package_cta')); ?>" class="btn btn-primary">Choose Studio+</a>
                 </div>
 
-                <!-- Core Four Package -->
+                <!-- Enterprise -->
                 <div class="package-card anim-reveal" style="transition-delay: 0.5s;">
                     <div class="package-header">
-                        <h3>Core Four</h3>
-                        <div class="package-price">$32K–$40K</div>
-                    </div>
-                    <div class="package-timeline">6–8 weeks</div>
-                    <div class="package-content">
-                        <p>Growing brands needing full identity</p>
-                        <div class="package-features">
-                            <h4>Included:</h4>
-                            <ul>
-                                <li>Discovery & Strategy</li>
-                                <li>Brand Foundation</li>
-                                <li>Design & Development (limited)</li>
-                                <li>Content & Campaigns</li>
-                            </ul>
-                        </div>
-                        <div class="package-exclusions">
-                            <h4>Not Included:</h4>
-                            <ul>
-                                <li>Launch & Optimize phase</li>
-                                <li>Growth & Scale planning</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <a href="<?php echo esc_url(csl_get_cta_link('core_four', 'services_page', 'package_cta')); ?>" class="btn btn-accent">Choose Core Four</a>
-                </div>
-
-                <!-- Full Process Package -->
-                <div class="package-card featured anim-reveal" style="transition-delay: 0.6s;">
-                    <div class="package-header">
-                        <h3>Full Process</h3>
-                        <div class="package-price">$39K–$49K</div>
-                    </div>
-                    <div class="package-timeline">8–12 weeks</div>
-                    <div class="package-content">
-                        <p>Premium brands defining categories</p>
-                        <div class="package-features">
-                            <h4>Included:</h4>
-                            <ul>
-                                <li>Discovery & Strategy</li>
-                                <li>Brand Foundation</li>
-                                <li>Design & Development</li>
-                                <li>Content & Campaigns</li>
-                                <li>Launch & Optimize</li>
-                            </ul>
-                        </div>
-                        <div class="package-exclusions">
-                            <h4>Not Included:</h4>
-                            <ul>
-                                <li>Growth & Scale phase</li>
-                                <li>Dedicated team</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <a href="<?php echo esc_url(csl_get_cta_link('full_process', 'services_page', 'package_cta')); ?>" class="btn btn-primary">Choose Full Process</a>
-                </div>
-
-                <!-- Enterprise Package -->
-                <div class="package-card anim-reveal" style="transition-delay: 0.7s;">
-                    <div class="package-header">
                         <h3>Enterprise</h3>
-                        <div class="package-price">$55K+</div>
+                        <div class="package-price">Custom Quote</div>
                     </div>
-                    <div class="package-timeline">12–20 weeks</div>
+                    <div class="package-timeline">8+ hrs/day &bull; 160+ hrs/month</div>
                     <div class="package-content">
-                        <p>Large-scale or multi-brand projects</p>
+                        <p>Dedicated team support for large-scale organizations and white-label partners that need relentless creative velocity.</p>
                         <div class="package-features">
-                            <h4>Included:</h4>
+                            <h4>Highlights:</h4>
                             <ul>
-                                <li>All phases including Growth & Scale customized</li>
-                                <li>Dedicated team</li>
-                                <li>Custom integrations</li>
+                                <li>Priority queue management and overflow coverage</li>
+                                <li>Embedded creative director and strategy support</li>
+                                <li>Custom tooling and integration workflows</li>
                             </ul>
                         </div>
                         <div class="package-exclusions">
-                            <h4>Not Included:</h4>
+                            <h4>Ideal For:</h4>
                             <ul>
-                                <li>Nothing - fully customized</li>
+                                <li>Enterprise teams coordinating multiple brands</li>
+                                <li>Agencies seeking a white-label creative partner</li>
                             </ul>
                         </div>
                     </div>
-                    <a href="<?php echo esc_url(csl_get_cta_link('enterprise', 'services_page', 'package_cta')); ?>" class="btn btn-primary">Contact for Enterprise</a>
+                    <a href="<?php echo esc_url(csl_get_cta_link('enterprise_unlimited', 'services_page', 'package_cta')); ?>" class="btn btn-primary">Start Enterprise Discovery</a>
                 </div>
             </div>
 
             <!-- Process Phases Explanation -->
-            <div class="packages-note anim-reveal" style="transition-delay: 0.8s;">
-                <h3>Our Process Phases</h3>
+            <div class="packages-note anim-reveal" style="transition-delay: 0.6s;">
+                <h3>Every Plan Includes</h3>
                 <div class="grid grid-3">
                     <div>
-                        <h4>Discovery & Strategy</h4>
-                        <p>Research, planning, and project roadmap development.</p>
+                        <h4>Unlimited Requests</h4>
+                        <p>Queue design, web, and content needs without worrying about overages or surprise invoices.</p>
                     </div>
                     <div>
-                        <h4>Brand Foundation</h4>
-                        <p>Logo design, brand guidelines, and identity system creation.</p>
+                        <h4>Daily Progress Updates</h4>
+                        <p>Track hours, deliverables, and next steps from a shared Slack + Notion workspace.</p>
                     </div>
                     <div>
-                        <h4>Design & Development</h4>
-                        <p>UI/UX design, website development, and custom features.</p>
+                        <h4>Creative Toolkit</h4>
+                        <p>Collaborate with us in Figma, WordPress, Adobe CC, and our full production stack.</p>
                     </div>
                     <div>
-                        <h4>Content & Campaigns</h4>
-                        <p>Copywriting, content strategy, and marketing assets.</p>
+                        <h4>Strategic Support</h4>
+                        <p>Core Unlimited and above add creative director oversight to keep everything on-message.</p>
                     </div>
                     <div>
-                        <h4>Launch & Optimize</h4>
-                        <p>Deployment, testing, and performance optimization.</p>
+                        <h4>Fast Turnarounds</h4>
+                        <p>24&ndash;48 hour delivery on most requests, with same-day rush options for Studio+ and Enterprise.</p>
                     </div>
                     <div>
-                        <h4>Growth & Scale</h4>
-                        <p>Analytics, A/B testing, and expansion planning.</p>
+                        <h4>Scalable Capacity</h4>
+                        <p>Flex daily time allocations as your roadmap evolves with month-to-month commitments.</p>
                     </div>
                 </div>
             </div>
