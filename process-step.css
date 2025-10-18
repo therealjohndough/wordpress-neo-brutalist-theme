@@ -1,0 +1,466 @@
+/**
+ * Process Step Individual Page Styles
+ */
+
+/* Step Hero */
+.step-hero {
+  padding: 10rem 2rem 6rem;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.step-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 50%, var(--step-color, #ff4500) 0%, transparent 70%);
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.step-breadcrumb {
+  font-size: 0.875rem;
+  color: rgba(245, 245, 245, 0.6);
+  margin-bottom: 2rem;
+}
+
+.step-breadcrumb a {
+  color: #ff4500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.step-breadcrumb a:hover {
+  color: #ff6a33;
+}
+
+.step-breadcrumb .separator {
+  margin: 0 0.5rem;
+  color: rgba(245, 245, 245, 0.3);
+}
+
+.step-icon-large {
+  font-size: 5rem;
+  color: var(--step-color, #ff4500);
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.step-title {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 1rem;
+  line-height: 1.1;
+}
+
+.step-subtitle {
+  font-size: clamp(1.125rem, 2vw, 1.5rem);
+  color: rgba(245, 245, 245, 0.7);
+  margin: 0 0 2rem;
+}
+
+.step-meta {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.step-duration {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgba(245, 245, 245, 0.8);
+  font-size: 1rem;
+}
+
+.step-number-badge {
+  padding: 0.5rem 1rem;
+  background: rgba(255, 69, 0, 0.1);
+  border: 1px solid rgba(255, 69, 0, 0.3);
+  border-radius: 50px;
+  color: #ff4500;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+/* Step Description */
+.step-description {
+  padding: 4rem 2rem;
+}
+
+.lead-text {
+  font-size: 1.25rem;
+  color: rgba(245, 245, 245, 0.9);
+  line-height: 1.8;
+  text-align: center;
+}
+
+/* What's Included */
+.step-included {
+  padding: 4rem 2rem;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.two-column-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+}
+
+@media (min-width: 768px) {
+  .two-column-layout {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.section-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #f5f5f5;
+  margin: 0 0 2rem;
+}
+
+.included-list,
+.deliverables-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.included-list li,
+.deliverables-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  color: rgba(245, 245, 245, 0.8);
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+.included-list i,
+.deliverables-list i {
+  color: #ff4500;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+}
+
+/* Pricing */
+.step-pricing {
+  padding: 6rem 2rem;
+}
+
+.pricing-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+@media (min-width: 768px) {
+  .pricing-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.pricing-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 3rem 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.pricing-card:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 69, 0, 0.5);
+}
+
+.pricing-card.featured {
+  border-color: #ff4500;
+  background: rgba(255, 69, 0, 0.05);
+}
+
+.pricing-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ff4500;
+  color: #fff;
+  padding: 0.25rem 1rem;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.pricing-label {
+  font-size: 0.875rem;
+  color: rgba(245, 245, 245, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+}
+
+.pricing-amount {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ff4500;
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+.pricing-timeline {
+  font-size: 1rem;
+  color: rgba(245, 245, 245, 0.7);
+  margin-bottom: 1.5rem;
+}
+
+.pricing-desc {
+  font-size: 1rem;
+  color: rgba(245, 245, 245, 0.6);
+  margin-bottom: 2rem;
+  min-height: 3em;
+}
+
+.pricing-note {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  margin-top: 3rem;
+}
+
+.pricing-note i {
+  color: #ff4500;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.pricing-note p {
+  color: rgba(245, 245, 245, 0.7);
+  margin: 0;
+  font-size: 0.875rem;
+}
+
+/* Step Navigation */
+.step-navigation {
+  padding: 4rem 2rem;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.nav-buttons {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .nav-buttons {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.nav-btn {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 69, 0, 0.5);
+  transform: translateX(0);
+}
+
+.nav-prev:hover {
+  transform: translateX(-4px);
+}
+
+.nav-next {
+  text-align: right;
+}
+
+.nav-next:hover {
+  transform: translateX(4px);
+}
+
+.nav-label {
+  font-size: 0.875rem;
+  color: rgba(245, 245, 245, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.nav-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-title i {
+  color: #ff4500;
+}
+
+/* All Steps Progress */
+.all-steps-progress {
+  padding: 6rem 2rem;
+}
+
+.steps-progress-bar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+.progress-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.progress-step::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--step-color, #ff4500);
+  border-radius: 0 0 12px 12px;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.progress-step.active::after {
+  transform: scaleX(1);
+}
+
+.progress-step:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--step-color, #ff4500);
+  transform: translateY(-4px);
+}
+
+.progress-step-icon {
+  font-size: 2rem;
+  color: var(--step-color, #ff4500);
+}
+
+.progress-step-label {
+  font-size: 0.75rem;
+  color: rgba(245, 245, 245, 0.7);
+  text-align: center;
+  line-height: 1.3;
+}
+
+.progress-step.active .progress-step-label {
+  color: #f5f5f5;
+  font-weight: 600;
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.container-narrow {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  text-align: center;
+}
+
+.btn-accent {
+  background: #ff4500;
+  color: #fff;
+}
+
+.btn-accent:hover {
+  background: #cc3700;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255, 69, 0, 0.3);
+}
+
+.btn-outline {
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #f5f5f5;
+}
+
+.btn-outline:hover {
+  border-color: #ff4500;
+  background: rgba(255, 69, 0, 0.1);
+  color: #ff4500;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .step-hero {
+    padding: 8rem 1.5rem 4rem;
+  }
+
+  .step-icon-large {
+    font-size: 3.5rem;
+  }
+
+  .pricing-amount {
+    font-size: 2.5rem;
+  }
+
+  .steps-progress-bar {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

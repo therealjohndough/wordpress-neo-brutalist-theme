@@ -1,0 +1,166 @@
+/* ============================================================================
+   CONTACT FORM - SIMPLE & CLEAN
+   ============================================================================ */
+
+.csl-contact-form {
+    max-width: 100%;
+}
+
+.csl-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 0;
+    background: none;
+    border: none;
+}
+
+.csl-form .title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+/* Form Groups */
+.csl-form .form-group {
+    display: block;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.csl-form .form-group.full-width {
+    display: block;
+}
+
+/* Labels and Inputs */
+.csl-form label {
+    display: block;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.csl-form label span {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+    font-weight: 500;
+    display: block;
+}
+
+.csl-form .input {
+    padding: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+    font-size: 1rem;
+    width: 100%;
+    min-height: 48px;
+    box-sizing: border-box;
+}
+
+.csl-form .input:focus {
+    outline: none;
+    border-color: #f97316;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.csl-form textarea.input {
+    min-height: 120px;
+    resize: vertical;
+    padding: 1rem;
+}
+
+.csl-form select.input {
+    cursor: pointer;
+}
+
+/* Completely disable browser autocomplete styling */
+.csl-form input:-webkit-autofill,
+.csl-form input:-webkit-autofill:hover,
+.csl-form input:-webkit-autofill:focus,
+.csl-form input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 1000px rgba(255, 255, 255, 0.1) inset !important;
+    -webkit-text-fill-color: #ffffff !important;
+    color: #ffffff !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Hide autocomplete dropdown */
+.csl-form input::-webkit-contacts-auto-fill-button,
+.csl-form input::-webkit-credentials-auto-fill-button {
+    visibility: hidden !important;
+    display: none !important;
+    pointer-events: none !important;
+}
+
+/* Required field indicator */
+.csl-form label[data-required="true"] span::after {
+    content: " *";
+    color: #f97316;
+}
+
+/* Submit Button */
+.csl-form .submit {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 6px;
+    background: #f97316;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    align-self: flex-start;
+    min-height: 48px;
+    margin-top: 1rem;
+}
+
+.csl-form .submit:hover {
+    background: #ea580c;
+}
+
+/* Loading States */
+.csl-form .submit:disabled {
+    background: #6b7280;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.csl-form .submit-loading {
+    font-size: 0.9rem;
+    color: #f97316;
+    margin-left: 0.5rem;
+}
+
+/* Error States */
+.csl-form .input.error {
+    border-color: #ef4444;
+    background: rgba(239, 68, 68, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .csl-form .form-group {
+        display: block;
+        margin-bottom: 1.5rem;
+    }
+    
+    .csl-form label {
+        margin-bottom: 1.5rem;
+    }
+    
+    .csl-form .submit {
+        width: 100%;
+        padding: 1.25rem 1.5rem;
+        font-size: 1.1rem;
+    }
+    
+    .csl-contact-form {
+        padding: 1rem;
+    }
+    
+    .csl-form .input {
+        font-size: 16px; /* Prevent zoom on iOS */
+    }
+}

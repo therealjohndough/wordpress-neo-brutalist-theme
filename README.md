@@ -1,162 +1,195 @@
-# NEO-BRUTALIST-WP-THEME-CUSTOM
+# CSL Agency WordPress Theme
 
-This repository contains the custom WordPress theme for the staging site at https://staging19.casestudy-labs.com/.
+Modern WordPress theme with Tailwind CSS, Vite, and Alpine.js for Case Study Labs.
 
-## Overview
-- **Theme Name**: NEO-BRUTALIST-WP-THEME-CUSTOM
-- **WordPress Version**: Compatible with WordPress 5.0+
-- **Staging Site**: https://staging19.casestudy-labs.com/
+## 🚀 Quick Start
 
-## Recent Audit (October 17, 2025)
-The theme was audited by Qwen3-Coder for mobile responsiveness and performance issues. Key findings and fixes are documented below.
+### Development
 
-### Critical Issues Identified
-1. **100vh Mobile Problems**: Using `100vh` causes content to be hidden under mobile browser UI
-2. **Fixed Header Overlap**: Fixed navigation overlaps page content
-3. **Horizontal Overflow**: Elements overflow on mobile screens
-4. **Missing Safe Areas**: No support for iPhone notches and safe areas
+```bash
+# Navigate to theme directory
+cd /Users/dough/public_html/wp-content/themes/casestudy-labs-modern-theme
 
-### Required Fixes
-Apply these changes to improve mobile experience:
+# Install dependencies
+npm install
 
-#### 1. Replace 100vh with Dynamic Viewport Units
-**File**: `style.css` or relevant CSS files
+# Start development server (hot reload)
+npm run dev
+
+# Build for production
+npm run build
+
+# Watch mode (auto-rebuild on changes)
+npm run watch
+```
+
+## 📦 Tech Stack
+
+- **Tailwind CSS 3.4** - Utility-first CSS framework
+- **Vite 5** - Lightning-fast build tool
+- **Alpine.js 3.13** - Lightweight JavaScript framework
+- **WordPress** - CMS backend
+
+## 🎨 Tailwind Configuration
+
+### Custom Colors
 
 ```css
-/* Replace all instances of 100vh with 100dvh */
-.hero-section, .full-height-section {
-  min-height: 100dvh; /* Modern browsers */
-}
-
-/* Fallback for older browsers */
-@supports not (min-height: 100dvh) {
-  .hero-section, .full-height-section {
-    min-height: calc(var(--vh, 1vh) * 100);
-  }
-}
+primary: #ff4500        /* Orange accent */
+primary-dark: #cc3700   /* Darker orange */
+accent: #1abc9c         /* Teal */
+dark: #1a1a1a          /* Dark background */
+light: #f5f5f5         /* Light background */
 ```
 
-#### 2. Add JavaScript for Viewport Height
-**File**: `functions.php` or custom JS file
-
-```javascript
-// Add to theme's JavaScript
-function setVH() {
-  let vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty('--vh', `${vh}px`);
-}
-
-setVH();
-window.addEventListener('resize', setVH);
-```
-
-#### 3. Fix Header Overlap
-**File**: `style.css`
+### Custom Fonts
 
 ```css
-/* Add padding to body to account for fixed header */
-body {
-  padding-top: 80px; /* Adjust to match header height */
-}
-
-@media (max-width: 768px) {
-  body {
-    padding-top: 60px; /* Smaller on mobile */
-  }
-}
+font-space      /* Space Grotesk (headings) */
+font-fira       /* Fira Code (monospace) */
+font-montserrat /* Montserrat (body) */
 ```
 
-#### 4. Prevent Horizontal Overflow
-**File**: `style.css`
+## 🔧 Development Workflow
 
-```css
-/* Prevent horizontal scrolling */
-body {
-  overflow-x: hidden;
-}
+### Making Style Changes
 
-/* Constrain wide elements */
-.container, .section {
-  max-width: 100%;
-  overflow-x: hidden;
-  box-sizing: border-box;
-}
+1. Edit `src/styles.css` for custom Tailwind components
+2. Or add Tailwind classes directly to PHP templates
+3. Run `npm run dev` for hot reload (with `WP_DEBUG = true`)
+4. Or `npm run build` for production
+
+### Environment Modes
+
+**Development** (`npm run dev`):
+- Loads from Vite dev server (localhost:5173)
+- Hot module replacement
+- Requires `WP_DEBUG = true` in wp-config.php
+
+**Production** (`npm run build`):
+- Optimized, minified assets
+- Hashed filenames for cache busting
+- Auto-loaded when built files exist
+
+## 📊 Performance
+
+| Metric | Before | After | Improvement |
+|--------|--------|-------|-------------|
+| CSS Size | ~120KB | 28.7KB | **76% smaller** |
+| Gzipped CSS | ~30KB | 5.12KB | **83% smaller** |
+| Build Time | Manual | <1s | ⚡ Lightning fast |
+
+## 📁 Project Structure
+
 ```
+### Project Structure
 
-#### 5. Add Safe Area Support
-**File**: `style.css`
-
-```css
-/* Safe area support for notched devices */
-@supports (padding: max(0px)) {
-  .header, .footer {
-    padding-left: max(12px, env(safe-area-inset-left));
-    padding-right: max(12px, env(safe-area-inset-right));
-  }
-
-  .footer {
-    padding-bottom: max(12px, env(safe-area-inset-bottom));
-  }
-}
 ```
-
-## Development Rules for AI Assistants (Qwen)
-
-### Important: Do Not Modify These Files Without Review
-- `functions.php` - Core theme functionality
-- `index.php` - Main template
-- `header.php` - Site header
-- `footer.php` - Site footer
-- `style.css` - Main stylesheet
-
-### Safe Modification Areas
-- Custom CSS in `custom-styles.css` (if exists)
-- Custom JavaScript in `custom-scripts.js` (if exists)
-- Page templates in `template-parts/`
-- Custom post types in `inc/`
-
-### Testing Requirements
-Before committing changes:
-1. Test on mobile devices (iOS Safari, Chrome mobile)
-2. Check viewport meta tag is present
-3. Verify no horizontal scrolling
-4. Test header positioning on scroll
-5. Validate in Chrome DevTools device emulation
-
-### Deployment
-1. Commit changes to this repo
-2. Push to GitHub
-3. Use rsync or FTP to deploy to staging server
-4. Test on live staging site
-5. Backup before major changes
-
-### Performance Optimizations
-- Use lazy loading for images
-- Minify CSS/JS for production
-- Optimize font loading with `font-display: swap`
-- Remove unused styles/scripts
-
-## File Structure
-```
-NEO-BRUTALIST-WP-THEME-CUSTOM/
-├── style.css                 # Main stylesheet
-├── functions.php             # Theme functions
-├── index.php                 # Main template
-├── header.php                # Header template
-├── footer.php                # Footer template
-├── page.php                  # Page template
-├── single.php                # Single post template
-├── archive.php               # Archive template
-├── search.php                # Search template
-├── 404.php                   # 404 template
-├── template-parts/           # Template parts
-├── inc/                      # Includes
-├── assets/                   # CSS, JS, images
+casestudy-labs-modern-theme/
+├── src/
+│   ├── styles.css          # Tailwind entry + custom components
+│   └── main.js             # Alpine.js + interactions
+├── dist/                   # Build output (generated)
 │   ├── css/
-│   ├── js/
-│   └── images/
-└── README.md                 # This file
+│   └── js/
+├── inc/
+│   ├── vite-helper.php     # WordPress + Vite integration
+│   └── seo-meta-tags.php   # SEO module
+├── functions.php           # Theme functions (updated)
+├── package.json            # NPM dependencies
+├── tailwind.config.js      # Tailwind configuration
+├── vite.config.js          # Vite build config
+├── README.md               # Development guide
+├── SEO-OPTIMIZATION.md     # SEO documentation
+├── SEO-CHECKLIST.md        # SEO manual tasks
+└── PROJECT-STATUS.md       # This file
+```
 ```
 
-## Contact
-For questions about this theme, contact the development team.
+## 🎯 Deployment
+
+### To Staging19
+
+1. **Commit changes**:
+   ```bash
+   git add .
+   git commit -m "Add Tailwind CSS with Vite"
+   git push origin main
+   ```
+
+2. **Deploy to SiteGround**:
+   - Changes pushed to GitHub
+   - Pull on server or use auto-deployment
+
+3. **Build on server**:
+   ```bash
+   npm install
+   npm run build
+   ```
+
+## 🛠️ Available Scripts
+
+```bash
+npm run dev      # Development mode with HMR
+npm run build    # Production build
+npm run watch    # Watch mode (auto-rebuild)
+npm run preview  # Preview production build
+```
+
+## 🧩 Pre-built Components
+
+### Buttons
+```html
+<a class="btn">Default Button</a>
+<a class="btn btn-accent">Accent Button</a>
+<a class="btn btn-glass">Glass Button</a>
+```
+
+### Glass Effects
+```html
+<div class="glass-panel">Glass Panel</div>
+<div class="glass-realistic">Realistic Glass</div>
+<div class="glass-medium">Medium Glass</div>
+```
+
+### Animations
+```html
+<div class="anim-reveal">Fade up on scroll</div>
+<div class="anim-slide-left">Slide from left</div>
+<div class="anim-slide-right">Slide from right</div>
+```
+
+## 📝 Notes
+
+- Legacy `style.css` is commented out (replaced by Tailwind)
+- Conditional CSS (contact forms, ticket forms) still loads separately
+- Google Fonts still load via CDN
+- HubSpot integration included
+
+## 🐛 Troubleshooting
+
+**Assets not loading?**
+1. Run `npm run build`
+2. Check `dist/` folder exists
+3. Clear WordPress cache
+
+**Development mode not working?**
+1. Run `npm run dev` in separate terminal
+2. Ensure `WP_DEBUG = true` in wp-config.php
+3. Check port 5173 is available
+
+**Build errors?**
+1. Delete `node_modules` and run `npm install`
+2. Check for syntax errors in `src/styles.css`
+3. Ensure all Tailwind classes are valid
+
+## 🔗 Links
+
+- **Staging:** https://staging19.casestudy-labs.com/
+- **GitHub:** https://github.com/therealjohndough/LIVE-THEME-AGENCY-OCT/tree/main/wp-content/themes/casestudy-labs-modern-theme
+- **Tailwind Docs:** https://tailwindcss.com
+- **Alpine.js Docs:** https://alpinejs.dev
+
+---
+
+**Built with ❤️ by Case Study Labs**
