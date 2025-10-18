@@ -667,6 +667,16 @@ body .site-header,
     top: 20px !important;
     right: 20px !important;
     z-index: 10001 !important;
+    background: var(--glass-bg-medium);
+    backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border-medium);
+    border-radius: var(--ui-radius);
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    padding: 12px;
+    box-sizing: border-box;
+    transition: var(--transition-fast);
   }
 
   .main-navigation {
