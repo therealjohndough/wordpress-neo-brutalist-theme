@@ -342,7 +342,7 @@ select:focus {
 
 /* Single case study template fixes */
 .single-casestudy {
-  min-height: 100vh;
+  min-height: 100dvh;
   padding-bottom: 4rem; /* Space before footer */
 }
 

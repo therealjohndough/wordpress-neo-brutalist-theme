@@ -490,6 +490,8 @@ body .site-header,
     width: 100%;
     padding-block: var(--space-5);
     padding-inline: var(--spacing-inline);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -736,7 +738,7 @@ body .site-header,
 /* -------------------------------------------------------------------------- */
 
 .hero {
-    min-height: 100vh;
+    min-height: 100dvh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -3262,7 +3264,7 @@ body.quiz-immersive {
 @media (max-width: 768px) {
     /* Prevent content jump during page load */
     body {
-        min-height: 100vh;
+        min-height: 100dvh;
         position: relative;
     }
     
@@ -3473,5 +3475,34 @@ body.quiz-immersive {
 
 .pricing-card h3 {
   font-size: 1.25rem;
+}
+
+/* Mobile Touch Targets Enhancement */
+.menu-item a,
+.nav-link,
+.button,
+.wp-block-button__link,
+button {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 12px 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Form inputs also need larger spacing */
+input[type="text"],
+input[type="email"],
+input[type="submit"],
+textarea {
+    min-height: 44px;
+    padding: 10px 15px;
+}
+
+/* Enhance spacing between interactive elements */
+li.menu-item,
+.wp-block-buttons .wp-block-button {
+    margin-bottom: 10px;
 }
 /* Test deployment - Fri Oct 17 09:11:32 EDT 2025 */
